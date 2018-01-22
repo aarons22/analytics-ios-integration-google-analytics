@@ -1,7 +1,7 @@
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
-#import <AstronomerAnalytics/SEGAnalyticsUtils.h>
-#import <AstronomerAnalytics/SEGAnalytics.h>
+#import <Analytics/SEGAnalyticsUtils.h>
+#import <Analytics/SEGAnalytics.h>
 #import "SEGGoogleAnalyticsIntegration.h"
 
 
@@ -83,7 +83,7 @@
         [self orderCompleted:payload.properties];
         return;
     }
-    
+
     // Try to extract a "category" property.
     NSString *category = @"All"; // default
     NSString *categoryProperty = [payload.properties objectForKey:@"category"];

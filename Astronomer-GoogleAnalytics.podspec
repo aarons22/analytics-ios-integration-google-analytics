@@ -22,13 +22,6 @@ Pod::Spec.new do |s|
   s.vendored_libraries = 'Pod/Classes/libGoogleAnalyticsServices.a'
   s.frameworks = 'CoreData', 'SystemConfiguration'
   s.libraries = 'sqlite3', 'z'
-  s.default_subspec = 'Core'
-
-  s.subspec 'Core' do |core|
-    core.source_files = 'Pod/Classes/**/*'
-  end
-
-  s.subspec 'Deps' do |spec|
-    spec.dependency 'AstronomerAnalytics', '~> 3.0'
-  end
+  s.source_files = 'Pod/Classes/**/*'
+  s.dependency 'Analytics', '~> 3.0'
 end
